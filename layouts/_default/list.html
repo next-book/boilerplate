@@ -1,0 +1,15 @@
+{{ define "content" }}
+<div class="content">
+    <div class="wrapper">
+    <section>
+      <ul>
+        {{ range .Pages }}
+        <li>
+          <a href="{{ .URL }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </section>
+  </div>
+</div>
+{{ end }}

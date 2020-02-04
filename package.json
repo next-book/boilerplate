@@ -1,0 +1,23 @@
+{
+  "name": "book-testing",
+  "version": "0.0.1",
+  "description": "book-testing",
+  "main": "",
+  "scripts": {
+    "cleanup": "rm -r ./_temp",
+    "build:js": "webpack --mode production",
+    "build": "npm run build:js && hugo --config config.toml && node filters.js && nb-mapper --src _temp --out _book && npm run cleanup",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jan Martinek",
+  "dependencies": {
+    "@babel/core": "^7.6.3",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "nb-base": "^0.1.13",
+    "nb-mapper": "^0.2.9",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}

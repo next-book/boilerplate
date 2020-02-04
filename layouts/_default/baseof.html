@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ .Data.meta.lang }}">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="./favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="apple-mobile-web-app-title" content="{{ .Title }}">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <title>{{ .Title }}</title>
+
+    {{ $style := resources.Get "style/style.scss" | toCSS | minify }}
+    {{ $styleHash:= $style | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" media="screen" integrity="$styleHash">
+  </head>
+  <body {{ with .Params.class }}class="{{ . }}"{{ end }}>
+    {{ block "content" . }}{{ end }}
+
+    {{ $scripts := resources.Get "scripts/bundle.js" }}
+    {{ $scriptsHash := $scripts | resources.Fingerprint }}
+    <script type="text/javascript" src="{{ $scripts.Permalink }}" integrity="{{ $scriptsHash.Data.Integrity }}"></script>
+  </body>
+</html>

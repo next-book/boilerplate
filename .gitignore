@@ -1,0 +1,5 @@
+.DS_Store
+assets/scripts/bundle.js
+node_modules/*
+_book/*
+_temp/*

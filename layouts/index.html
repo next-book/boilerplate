@@ -1,0 +1,13 @@
+{{ define "content" }}
+<header class="hero">
+  <h1>
+    {{ .Title }}
+  </h1>
+  <p class="author">{{ .Params.author }}</p>
+</header>
+<div class="content">
+    <div class="wrapper">
+      {{ .Content }}
+  </div>
+</div>
+{{ end }}
