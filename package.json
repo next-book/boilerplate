@@ -7,6 +7,7 @@
     "cleanup": "rm -r ./_temp",
     "build:js": "webpack --mode production",
     "build": "npm run build:js && hugo --config config.toml && node filters.js && nb-mapper --src _temp --out _book && npm run cleanup",
+    "server": "npm run build:js && hugo --config config.toml && node filters.js && nb-mapper -w --src _temp --out _book",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jan Martinek",

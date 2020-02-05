@@ -11,7 +11,7 @@
 
     {{ $style := resources.Get "style/style.scss" | toCSS | minify }}
     {{ $styleHash:= $style | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" media="screen" integrity="$styleHash">
+    <link rel="stylesheet" href="{{ $style.Permalink }}" media="screen" integrity="{{ $styleHash.Data.Integrity }}">
   </head>
   <body {{ with .Params.class }}class="{{ . }}"{{ end }}>
     {{ block "content" . }}{{ end }}

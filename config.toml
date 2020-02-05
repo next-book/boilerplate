@@ -13,11 +13,10 @@ unsafe = true
 
 
 
-[outputFormats.book]
+
+[outputFormats.meta]
 mediaType = "application/json"
-baseName = "book"
+baseName = "_book"
 isPlainText = true
 notAlternative = true
 
-[outputs]
-    book = ["book"]
