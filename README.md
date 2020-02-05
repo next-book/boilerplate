@@ -45,11 +45,14 @@ To publish a book, run `npm run build` and upload the `_book` folder to any webs
 
 ## Troubleshooting
 
-I’m not sure whether git is installed on my system!
-: Run `git version` on command line. If there’s an error, git is probably not installed or there’s some other problem. (It should be available on Linux and MacOs. On Windows, use above linked installation guide.)
+### I’m not sure whether git is installed on my system!
 
-When trying to run commands on my MacOS computer, `invalid active developer path` error pops up or a `Command Line Tools are required` modal window is shown.
-: Agree to install Command Line Tools or run `xcode-select --install`.
+Run `git version` on command line. If there’s an error, git is probably not installed or there’s some other problem. (It should be available on Linux and MacOs. On Windows, use above linked installation guide.)
 
-I don’t know how to navigate to a folder on command line.
-: Use command `cd` (cd as in Change Directory). You can just write `cd`, then press space and the write a name of the folder. Your command line app will be probably initially in some default location (your user folder on Linux/Mac and C:/ on Windows), so you may write something `cd Documents` and press enter — this should either warn you (when folder does not exist) or take you there. **Tips:** your command line will probably have autocompletion — you can write `cd Doc` and press TAB key and if there‘s a folder with a name starting with `Doc`, its name should be autocompleted. On some systems you can drag a folder from file browser to the command line window so that you don’t need to write it manually.
+### When trying to run commands on my MacOS computer, `invalid active developer path` error pops up or a `Command Line Tools are required` modal window is shown.
+
+Agree to install Command Line Tools or run `xcode-select --install`.
+
+### I don’t know how to navigate to a folder on command line.
+
+Use command `cd` (cd as in Change Directory). You can just write `cd`, then press space and the write a name of the folder. Your command line app will be probably initially in some default location (your user folder on Linux/Mac and C:/ on Windows), so you may write something `cd Documents` and press enter — this should either warn you (when folder does not exist) or take you there. **Tips:** your command line will probably have autocompletion — you can write `cd Doc` and press TAB key and if there‘s a folder with a name starting with `Doc`, its name should be autocompleted. On some systems you can drag a folder from file browser to the command line window so that you don’t need to write it manually.
