@@ -1,5 +1,4 @@
 baseURL = ""
-languageCode = "en-us"
 relativeurls = true
 uglyurls = true
 disableKinds = ["taxonomyTerm", "taxonomy"]

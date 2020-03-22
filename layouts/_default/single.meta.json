@@ -1,4 +1,5 @@
 {{- .Scratch.SetInMap "output" "meta" .Params.meta -}}
 {{- .Scratch.SetInMap "output" "chapters" .Params.chapters -}}
 {{- .Scratch.SetInMap "output" "static" .Params.static -}}
+{{- .Scratch.SetInMap "output" "languageCode" .Params.languageCode -}}
 {{- .Scratch.Get "output" | jsonify -}}
