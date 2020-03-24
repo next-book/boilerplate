@@ -2,7 +2,7 @@
 outputs: meta
 slug: book
 
-languageCode: cs
+languageCode: en-US
 meta:
   title: "Next-book Boilerplate"
   author: "Author Name"
