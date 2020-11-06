@@ -1,14 +1,5 @@
 @import "./../../node_modules/nb-base/src/scss/style.scss";
 
-:root {
-  --content-font: serif;
-  --background: #fafafa;
-  --main: #255537;
-  --light: #fafafa;
-  --dark: rgba(0, 0, 0, 0.8);
-  color: var(--dark);
-}
-
 .hero {
   padding: 10vh 10vw;
 
