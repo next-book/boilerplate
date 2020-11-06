@@ -1,13 +1,7 @@
 @import "./../../node_modules/nb-base/src/scss/style.scss";
 
 :root {
-  font-family: serif;
-  font-size: 18px;
-  line-height: 1.4;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-
+  --content-font: serif;
   --background: #fafafa;
   --main: #255537;
   --light: #fafafa;
@@ -16,24 +10,9 @@
 }
 
 .hero {
-  background: navy;
-  background-size: cover;
-  box-sizing: border-box;
   padding: 10vh 10vw;
-  margin-bottom: -11vh;
-
-  h1,
-  p {
-    font-family: serif;
-    color: white;
-    font-size: 7vh;
-    text-shadow: black 0px 0px 2px;
-    text-align: center;
-    line-height: 1.2;
-  }
 
   p {
     text-transform: uppercase;
-    font-size: 5vh;
   }
 }

@@ -1,9 +1,9 @@
 {{ define "content" }}
 <div class="content">
-  <div class="wrapper">
+  <main>
     <h1>{{ .Title | markdownify }}</h1>
     {{ with .Params.authors }}<p class="authors">{{ . | markdownify }}</p>{{ end }}
     {{ partial "typo.html" .RawContent }}
-  </div>
+  </main>
 </div>
 {{ end }}

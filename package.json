@@ -16,8 +16,8 @@
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
     "babel-loader": "^8.0.6",
-    "nb-base": "^0.1.16",
-    "nb-mapper": "^0.2.14",
+    "nb-base": "^0.1.17",
+    "nb-mapper": "^0.2.15",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   }
