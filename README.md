@@ -8,7 +8,7 @@ We know it asks a lot at the moment — if there’s anything we could help with
 
 Every next-book is a website. This tool makes it easier to publish a next-book from a set of resources (texts, layouts, styles etc.).
 
-You may use this boilerplate on your machine or use this on service such as Netlify that handles all the installation and requirements for you. We’ll update this boilerplate to run on Netlify (including a CMS interface for book editing) soon.
+You may use this boilerplate on your machine or use this on service such as Netlify that handles all the installation and requirements for you (config file `netlify.toml` is included).
 
 ## Requirements
 
