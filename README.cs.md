@@ -4,6 +4,16 @@ Jednoduchý nástroj pro publikování webových knih pomocí next-booku. Vyžad
 
 Víme, že jde zatím o docela vysoké nároky — kdybychom vám mohli s čímkoli pomoci, dejte nám vědět pomocí některého z kontaktů na našem webu [next-book.info](https://next-book.info).
 
+## Co je to next-book?
+
+Next-book je způsob, jak publikovat knihy coby webové stránky.
+
+Proč? Denně trávíme neskutečné množství času na webu, ale pro čtení knih je zatím poměrně nevhodný. Není snadné udělat si záložku v půlce stránky anebo odkázat na konkrétní odstavec. Není možné dělat snadno anotace anebo si nastavit zobrazení.
+
+Next-book je jeden z nástrojů, které se snaží tyto problémy řešit. Jde o otevřenou platformu (veškeré nástroje jsou dostupné pod svobodnou licencí).
+
+Více podrobností najdete na webu [next-book.info](https://www.next-book.info), v češtině též na [stránce pro nakladatele](https://www.next-book.info/cs/). Princip mapování knihy, který umožňuje některé pokročilé funkcionality, je předveden na stránce [nb-mapper test](https://next-book.github.io/nb-mapper/).
+
 ## Použití
 
 Každý next-book je webová stránka. Tento nástroj usnadňuje publikování next-booků ze sady podkladů (texty, grafika apod.).
