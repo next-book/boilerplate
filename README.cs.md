@@ -12,7 +12,7 @@ Proč? Denně trávíme neskutečné množství času na webu, ale pro čtení k
 
 Next-book je jeden z nástrojů, které se snaží tyto problémy řešit. Jde o otevřenou platformu (veškeré nástroje jsou dostupné pod svobodnou licencí).
 
-Více podrobností najdete na webu [next-book.info](https://www.next-book.info), v češtině též na [stránce pro nakladatele](https://www.next-book.info/cs/). Princip mapování knihy, který umožňuje některé pokročilé funkcionality, je předveden na stránce [nb-mapper test](https://next-book.github.io/nb-mapper/).
+Více podrobností najdete na webu [next-book.info](https://www.next-book.info), v češtině též na [stránce pro nakladatele](https://www.next-book.info/cs/). Princip mapování knihy, který umožňuje některé pokročilé funkcionality, je předveden na stránce [publisher test](https://next-book.github.io/publisher/).
 
 ## Použití
 
@@ -32,12 +32,12 @@ Podle toho, jaký používáte operační systém, můžete mít některé z tě
 
 ## Spuštění generátoru knih
 
-1. Naklonujte tento repozitář — použijte gitový klient jako např. GitKraken anebo spusťte `git clone https://github.com/next-book/nb-boilerplate.git` v příkazové řádce.
-2. Otevřte příkazovou řádku a nalezněte nově vytvořenou složku `nb-boilerplate` (pokud nevíte jak, podívejte se níže do sekce Troubleshooting).
+1. Naklonujte tento repozitář — použijte gitový klient jako např. GitKraken anebo spusťte `git clone https://github.com/next-book/boilerplate.git` v příkazové řádce.
+2. Otevřte příkazovou řádku a nalezněte nově vytvořenou složku `boilerplate` (pokud nevíte jak, podívejte se níže do sekce Troubleshooting).
 3. Spusťte `npm install` (tímto se nainstalují potřebné knihovny do vašeho počítače).
 4. Spusťte `npm run build` (tímto se vygeneruje kniha z pokladů).
 
-Pokud šlo vše hladce, měli byste ve složce `nb-boilerplate` vidět složku s knihou (`_book`). Tu můžete nahrát na svůj web — to je celé :)
+Pokud šlo vše hladce, měli byste ve složce `boilerplate` vidět složku s knihou (`_book`). Tu můžete nahrát na svůj web — to je celé :)
 
 **Tip:** Náhled knihy můžete otevřít spuštěním `npm run server` — tento příkaz vygeneruje knihu a poté spustí lokální server na adrese [http://127.0.0.1:23011/](http://127.0.0.1:23011/), kde ji zpřístupní.
 
@@ -57,14 +57,14 @@ Pro publikování knihy spusťte `npm run build` a nahrajte složku `_book` na j
 
 ## Dokumentace
 
-Při běžném užití oceníte především přehled všech CSS proměnných, které se používají pro nastavení vizuálního stylu knihy: ten najdete v souboru [`_defaults.scss` uvnitř knihovny `nb-base`](https://github.com/next-book/nb-base/blob/master/src/scss/_defaults.scss).
+Při běžném užití oceníte především přehled všech CSS proměnných, které se používají pro nastavení vizuálního stylu knihy: ten najdete v souboru [`_defaults.scss` uvnitř knihovny `@next-book/interface`](https://github.com/next-book/interface/blob/main/src/scss/_defaults.scss).
 
 Tento boilerplate používá pro generování HTML kódu nástroj [hugo](https://gohugo.io/) — pokud budete chtít upravit nějakou část HTML kódu knihy (ve složce `layouts`), měla by vám stačit znalost tohoto nástroje.
 
-Pokud se budete chtít hlouběji ponořit do práce s next-bookem, budete pracovat primárně se dvěma nástroji: `nb-mapper` ke generování knihy a `nb-base` pro zobrazení uživatelského rozhraní knihy:
+Pokud se budete chtít hlouběji ponořit do práce s next-bookem, budete pracovat primárně se dvěma nástroji: `@next-book/publisher` ke generování knihy a `@next-book/interface` pro zobrazení uživatelského rozhraní knihy:
 
-- [Dokumentace `nb-mapper`](https://next-book.github.io/nb-mapper/api/) je užitečná především tehdy, když chcete lépe porozumět nějaké části fungování next-booku nebo při nečekaném chování. Dokumentace je vygenerována ze zdrojového kódu a doplněná komentáři.
-- Knihovna [`nb-base`](https://github.com/next-book/nb-base) je psaná v Typescriptu a používá pro práci s rozhraním frameworky React a redux, je tedy čitelná přímo. Všechny komponenty najdete ve složce `src/js/components`.
+- [Dokumentace `publisher`](https://next-book.github.io/publisher/api/) je užitečná především tehdy, když chcete lépe porozumět nějaké části fungování next-booku nebo při nečekaném chování. Dokumentace je vygenerována ze zdrojového kódu a doplněná komentáři.
+- Knihovna [`interface`](https://github.com/next-book/interface) je psaná v Typescriptu a používá pro práci s rozhraním frameworky React a redux, je tedy čitelná přímo. Všechny komponenty najdete ve složce `src/js/components`.
 
 ## Troubleshooting
 

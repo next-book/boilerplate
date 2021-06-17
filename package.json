@@ -1,13 +1,13 @@
 {
-  "name": "book-testing",
+  "name": "@next-book/boilerplate",
   "version": "0.0.1",
-  "description": "book-testing",
+  "description": "Quick start for publishing web books with next-book.",
   "main": "",
   "scripts": {
     "cleanup": "rm -r ./_temp",
     "build:js": "webpack --mode production",
-    "build": "npm run build:js && hugo --config config.toml && node filters.js && nb-mapper --src _temp --out _book && npm run cleanup",
-    "server": "npm run build:js && hugo --config config.toml && node filters.js && nb-mapper -w --src _temp --out _book",
+    "build": "npm run build:js && hugo --config config.toml && node filters.js && publish-nb --src _temp --out _book && npm run cleanup",
+    "server": "npm run build:js && hugo --config config.toml && node filters.js && publish-nb -w --src _temp --out _book",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jan Martinek",
@@ -16,8 +16,8 @@
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
     "babel-loader": "^8.0.6",
-    "nb-base": "^0.1.17",
-    "nb-mapper": "^0.2.15",
+    "@next-book/interface": "^0.1.17",
+    "@next-book/publisher": "^0.2.15",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   }

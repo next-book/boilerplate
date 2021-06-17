@@ -1,5 +1,5 @@
-import { initBook } from 'nb-base';
+import { initBook } from "@next-book/interface";
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   initBook();
 });
