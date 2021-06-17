@@ -1,0 +1,117 @@
+{
+  "author": "Author Name",
+  "keywords": [],
+  "published": 2020,
+  "title": "Next-book Boilerplate",
+  "identifier": "name-next-book-boilerplate-2020-06db437",
+  "revision": "06db437",
+  "generatedAt": {
+    "date": "Thu Jun 17 2021 21:36:21 GMT+0000 (Coordinated Universal Time)",
+    "unix": 1623965781990
+  },
+  "documents": [
+    {
+      "title": "Next-book boilerplate",
+      "file": "index.html",
+      "words": 0,
+      "chars": 0,
+      "ideas": 0,
+      "role": "index",
+      "order": null,
+      "next": "where-i-lived-and-what-i-lived-for.html",
+      "toc": []
+    },
+    {
+      "title": "Reading",
+      "file": "reading.html",
+      "words": 3759,
+      "chars": 20866,
+      "ideas": 129,
+      "role": "chapter",
+      "order": 1,
+      "prev": "where-i-lived-and-what-i-lived-for.html",
+      "next": "sounds.html",
+      "toc": [
+        {
+          "index": 0,
+          "level": 1,
+          "name": "Reading",
+          "id": "chunk1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Solitude",
+      "file": "solitude.html",
+      "words": 3450,
+      "chars": 18237,
+      "ideas": 137,
+      "role": "chapter",
+      "order": 3,
+      "prev": "sounds.html",
+      "next": null,
+      "toc": [
+        {
+          "index": 0,
+          "level": 1,
+          "name": "Solitude",
+          "id": "chunk1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Sounds",
+      "file": "sounds.html",
+      "words": 5737,
+      "chars": 31441,
+      "ideas": 213,
+      "role": "chapter",
+      "order": 2,
+      "prev": "reading.html",
+      "next": "solitude.html",
+      "toc": [
+        {
+          "index": 0,
+          "level": 1,
+          "name": "Sounds",
+          "id": "chunk1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Where I Lived, and What I Lived For",
+      "file": "where-i-lived-and-what-i-lived-for.html",
+      "words": 6105,
+      "chars": 32356,
+      "ideas": 235,
+      "role": "chapter",
+      "order": 0,
+      "prev": null,
+      "next": "reading.html",
+      "toc": [
+        {
+          "index": 0,
+          "level": 1,
+          "name": "Where I Lived, and What I Lived For",
+          "id": "chunk1",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "all": {
+      "words": 19051,
+      "chars": 102900,
+      "ideas": 714
+    },
+    "chapters": {
+      "words": 19051,
+      "chars": 102900,
+      "ideas": 714
+    }
+  }
+}
