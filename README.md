@@ -20,7 +20,7 @@ Depending on your system, you may have some of these already installed.
 
 ## Running the book generator
 
-1. Clone this repository — use a git client such as GitKraken or run `git clone https://github.com/next-book/nb-boilerplate.git .` on command line.
+1. Clone this repository — use a git client such as GitKraken or run `git clone https://github.com/next-book/boilerplate.git .` on command line.
 2. Open the command line and navigate into the newly created folder (see troubleshooting if you don’t know how).
 3. Run `npm install`.
 4. Run `npm run build`.
