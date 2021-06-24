@@ -19,19 +19,38 @@ jobs:
         with:
           node-version: "14"
 
-      - run: npm install
+      - name: Install dependencies
+        run: npm install
+
+      - name: Check if there is an EPUB waiting for conversion
+        id: epub-exists
+        run: echo "::set-output name=result::$(sh epub-exists.sh)"
+
+      - name: Convert EPUB
+        if: ${{ steps.epub-exists.outputs.result == 'true' }}
+        run: epub2nb -s epub -o epub-converted
+
+      - name: Publish converted EPUB 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        if: ${{ steps.epub-exists.outputs.result == 'true' }}
+        with:
+          branch: docs
+          folder: epub-converted
 
       - name: Setup Hugo
+        if: ${{ steps.epub-exists.outputs.result == 'false' }}
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: "0.81.0"
           extended: true
 
       - name: Build
+        if: ${{ steps.epub-exists.outputs.result == 'false' }}
         run: npm run build
 
-      - name: Deploy 🚀
+      - name: Publish the book 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
+        if: ${{ steps.epub-exists.outputs.result == 'false' }}
         with:
           branch: docs
           folder: _book
