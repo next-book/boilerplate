@@ -28,7 +28,7 @@ jobs:
 
       - name: Convert EPUB
         if: ${{ steps.epub-exists.outputs.result == 'true' }}
-        run: epub2nb -s epub -o epub-converted
+        run: epub2nb -s epub -o epub-converted --repo $GITHUB_REPOSITORY
 
       - name: Publish converted EPUB 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
