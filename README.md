@@ -43,13 +43,17 @@ Book needs to be in a git repository to properly version itself, so if you downl
 
 To publish a book, run `npm run build` and upload the `_book` folder to any website. You can use your local web server to preview the book.
 
+## Using EPUB conversion tool
+
+You may want to use a semi-automated EPUB conversion tool embedded in this boilerplate. See [README.epub-workflow.md](blob/main/README.epub-workflow.md).
+
 ## Troubleshooting
 
 ### I’m not sure whether git is installed on my system!
 
 Run `git version` on command line. If there’s an error, git is probably not installed or there’s some other problem. (It should be available on Linux and MacOs. On Windows, use above linked installation guide.)
 
-### When trying to run commands on my MacOS computer, `invalid active developer path` error pops up or a `Command Line Tools are required` modal window is shown.
+### When trying to run commands on my MacOS computer, „invalid active developer path“ error pops up or a „Command Line Tools are required“ modal window is shown.
 
 Agree to install Command Line Tools or run `xcode-select --install`.
 

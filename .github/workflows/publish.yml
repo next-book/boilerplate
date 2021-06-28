@@ -28,14 +28,22 @@ jobs:
 
       - name: Convert EPUB
         if: ${{ steps.epub-exists.outputs.result == 'true' }}
-        run: epub2nb -s epub -o epub-converted --repo $GITHUB_REPOSITORY
+        run: npx epub2nb -s epub --gh $GITHUB_REPOSITORY
 
-      - name: Publish converted EPUB 🚀
+      - name: Publish conversion UI 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         if: ${{ steps.epub-exists.outputs.result == 'true' }}
         with:
           branch: docs
-          folder: epub-converted
+          folder: epub
+
+      - name: Push converted content 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        if: ${{ steps.epub-exists.outputs.result == 'true' }}
+        with:
+          branch: main
+          folder: epub/content
+          target-folder: content
 
       - name: Setup Hugo
         if: ${{ steps.epub-exists.outputs.result == 'false' }}
