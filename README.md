@@ -45,7 +45,7 @@ To publish a book, run `npm run build` and upload the `_book` folder to any webs
 
 ## Using EPUB conversion tool
 
-You may want to use a semi-automated EPUB conversion tool embedded in this boilerplate. See [README.epub-workflow.md](blob/main/README.epub-workflow.md).
+You may want to use a semi-automated EPUB conversion tool embedded in this boilerplate. See [README.epub-workflow.md](README.epub-workflow.md).
 
 ## Troubleshooting
 
