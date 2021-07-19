@@ -17,7 +17,7 @@
     "@babel/plugin-proposal-class-properties": "^7.14.5",
     "@babel/preset-env": "^7.14.5",
     "@babel/preset-react": "^7.14.5",
-    "@next-book/epub2nb": "^0.0.2",
+    "@next-book/epub2nb": "^0.0.8",
     "@next-book/interface": "^0.1.21",
     "@next-book/publisher": "^0.2.20",
     "babel-loader": "^8.2.2",
