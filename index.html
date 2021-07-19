@@ -1,36 +1,518 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta name="generator" content="Hugo 0.81.0">
-    <meta charset="utf-8">
-    <link rel="icon" href="./favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="apple-mobile-web-app-title" content="Next-book boilerplate">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>Next-book boilerplate</title>
-    <link rel="stylesheet" href="./style/style.min.css" media="screen" integrity="sha256-0HU4DyeVQ9j1CgbQEvEhFsHtFoxn1ab6NeCS4IOAoDA=">
-    <link rel="index" href="./index.html">
-    <link rel="license" href="./license.html">
-    <link rel="publication" href="./manifest.json" id="manifest">
-    <link rel="next" href="./where-i-lived-and-what-i-lived-for.html">
-    <link rel="self" href="index.html">
-    <meta name="identifier" content="name-next-book-boilerplate-2020-9cd1b19">
-    <meta name="role" content="index">
-  </head>
-  <body data-nb-words="0" data-nb-chars="0" class="nb-role-index nb-custom-style">
-    <header class="hero">
-      <h1>
-        Next-book boilerplate
-      </h1>
-      <p class="author"></p>
-    </header>
-    <div class="content">
-      <div class="wrapper">
-        <h2 id="it-works">It works!</h2>
-        <p>This is a boilerplate for next-book production.</p>
-        <p>It uses four chapters of Walden by Henry David Thoreau produced by <a href="https://alexcabal.com">Alex Cabal</a> for <a href="https://standardebooks.org">Standard Ebooks project</a> and provided under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal Public Domain Dedication</a> Licence. This boilerplate is provided under the same licence.</p>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Conversion report</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <link rel="stylesheet" href="./assets/autocomplete.css" />
+  <link rel="stylesheet" href="./assets/nestable.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+  <style>
+    :root {
+      background-color: #eee;
+      --gray: #aaa;
+
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+      font-size: 14px;
+    }
+
+    textarea, input {
+      font-size: 1rem;
+      -webkit-appearance: none;
+      padding: 0.25rem;
+      border: 1px solid gray;
+      border-radius: 3px;
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    .els {
+    }
+
+    .nestable h2 {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .structure {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-gap: 2rem;
+    }
+
+    .controls {
+      background-color: white;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      display: none;
+      margin: -1px -1px 0 0;
+    }
+
+    .nestable-item {
+      position: relative;
+    }
+
+    .nestable-item:hover > div > div > div > .controls {
+      display: flex;
+    }
+
+    .desc {
+      display: none;
+    }
+
+    .show-in-toc {
+      display: block;
+      margin: 0 0 0 1rem;
+      padding: 0.25rem 0.5rem;
+      line-height: 1rem;
+      border: 1px solid var(--gray);
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .numbered-children {
+      display: block;
+      margin-left: 1rem;
+      padding: 0.25rem 0.5rem;
+      line-height: 1rem;
+      border: 1px solid var(--gray);
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .show-in-toc input,
+    .numbered-children input {
+      display: none;
+    }
+
+    .role {
+      display: flex;
+    }
+
+    .role label {
+      display: block;
+      margin: 0;
+    }
+
+    .role input {
+      display: none;
+    }
+
+    .role .btn {
+      color: #777;
+      display: block;
+      margin: 0;
+      padding: 0.25rem 0.5rem;
+      line-height: 1rem;
+      border: solid var(--gray);
+      border-width: 1px 1px 1px 0;
+      cursor: pointer;
+    }
+
+    .role .btn:hover {
+      background: #eee;
+    }
+
+    .role input:checked + .btn {
+
+      color: black;
+      box-shadow: inset 0 0 4px rgba(0, 0, 0, .7);
+    }
+
+    .role label:first-child .btn {
+      border-width: 1px;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .role label:last-child .btn {
+      border-radius: 0 3px 3px 0;
+    }
+
+    .material-icons {
+      vertical-align: middle;
+    }
+
+    .toggle-on,
+    .toggle-off {
+      font-size: 3rem;
+      line-height: 1rem;
+    }
+
+    .toggle-on {
+      color: green;
+    }
+
+    .toggle-off {
+      color: #aaa;
+    }
+
+    .removed h2 {
+      color: red;
+      text-decoration: line-through;
+    }
+
+    .removed .show-in-toc {
+      opacity: 10%;
+    }
+
+    .not-in-toc h2 {
+      opacity: 0.5;
+    }
+
+    .toc-preview > ul {
+      padding-left: 1rem;
+    }
+
+    .toc-preview li {
+      margin: 0.5rem 0;
+    }
+
+    .toc-preview .filename {
+      display: block;
+      color: var(--gray);
+    }
+
+    nav ul {
+      display: flex;
+      padding: 0;
+      border-bottom: 1px solid gray;
+    }
+
+    nav ul li {
+      cursor: pointer;
+      display: block;
+      padding: 0.5rem 1rem;
+    }
+
+    nav ul li.active {
+      border-bottom: 2px solid gray;
+    }
+
+    .metadata {
+      display: grid;
+      grid-column-gap: 2rem;
+      grid-row-gap: 0.5rem;
+      grid-template-columns: 1fr 1fr;
+    }
+
+
+    .metadata h2 {
+      margin: 2rem 0 0;
+      grid-column: 1 / -1;
+    }
+
+    .metadata label {
+      display: block;
+    }
+
+    .metadata input {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .metadata .chapters,
+    .metadata .chapters li div {
+      display: block;
+      padding: 0;
+      grid-column: 1 / -1;
+    }
+
+    .metadata .chapters li div {
+      margin-left: 2rem;
+    }
+
+    .metadata .chapters ol,
+    .metadata .chapters ul {
+      display: block;
+      padding: 0;
+    }
+
+    .metadata .chapters li {
+      display: grid;
+      grid-template-columns: 1fr 30vw 30vw;
+      grid-gap: 2rem;
+      align-items: center;
+
+      border-top: 1px solid gray;
+      padding: 0.5rem 0;
+    }
+
+    .copyButton {
+      margin: 0;
+    }
+
+    .paramsLink {
+      margin: 0;
+      float: right;
+    }
+
+    #report {
+      font-family: monospace;
+      width: 100%;
+      height: 40vh;
+    }
+
+    .view-chapter {
+      display: block;
+      background: white;
+      z-index: 2;
+      position: fixed;
+      top: 50px;
+      left: 50px;
+      bottom: 50px;
+      right: 50px;
+      border: 1px solid gray;
+      border-radius: 3px;
+    }
+
+    .view-chapter-close {
+      line-height: 2rem;
+      height: 2rem;
+      position: absolute;
+      top: 0;
+      right: 1rem;
+      cursor: pointer;
+    }
+
+    .view-chapter iframe {
+      display: block;
+      border: solid gray;
+      border-width: 1px 0 0;
+
+      position: absolute;
+      width: calc(100% - 2rem);
+      height: calc(100% - 3rem);
+      top: 2rem;
+      bottom: 0;
+      left: 1rem;
+    }
+
+    .unused-classes {
+      padding: 0;
+    }
+
+    .unused-classes li {
+      list-style-type: none;
+      margin-bottom: 0.5rem;
+    }
+
+    .unused-classes .material-icons {
+      cursor: pointer;
+    }
+
+    .css-preview {
+      border: 1px solid gray;
+      padding: 1rem;
+      border-radius: 3px;
+      margin: 1rem 0;
+    }
+
+    .css-preview figure {
+      margin: 0 0 2rem;
+    }
+
+    .css-preview .preview-wrapper {
+      border: 1px dashed gray;
+      background: white;
+      padding: 1rem;
+    }
+
+    .clickable {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <script type="text/x-template" id="autocomplete-tpl">
+    <div class="autocomplete">
+      <label :for="id">{{label}}<br>
+        <textarea :id="id" :rows="rows" :cols="cols" class="autocomplete-input" :placeholder="placeholder" @focusout="focusout" @focus="focus" @keydown.13="chooseItem" @keydown.tab="chooseItem" @keydown.40="moveDown" @keydown.38="moveUp" v-bind:value="value" v-on:input="$emit('input', $event.target.value)"></textarea>
+        <ul :class="{'autocomplete-list': true, [id+'-list']: true}" v-if="searchMatch.length > 0">
+          <li :class="{active: selectedIndex === index}" v-for="(result, index) in searchMatch" @click="selectItem(index), chooseItem()" v-html="highlightWord(result)">
+          </li>
+        </ul>
+      </label>
+      <div class="autocomplete-matching">
+        <p><b>{{ matching.length }} classes</b></p>
+        <ul>
+          <li v-for="name in matching">{{ name }}</li>
+        </ul>
       </div>
     </div>
-    <script type="text/javascript" src="./scripts/bundle.js" integrity="sha256-x5EUMx3hhXwlnmb8jNuT80IFyXbfgPpvQLiBBlogboo="></script>
-  </body>
+  </script>
+
+  <main>
+    <div id="app">
+      <h1>Conversion: {{ epub.metadata.title }}</h1>
+
+      <nav>
+        <ul>
+          <li v-on:click="navToMeta" :class="[tab == 'metadata' ? 'active' : '']">Metadata</li>
+          <li v-on:click="navToStructure" :class="[tab == 'structure' ? 'active' : '']">Structure</li>
+          <li v-on:click="navToFormat" :class="[tab == 'format' ? 'active' : '']">Format</li>
+          <li v-on:click="navToData" :class="[tab == 'data' ? 'active' : '']">Data export</li>
+        </ul>
+      </nav>
+
+      <div v-if="tab == 'structure'" class="structure">
+        <vue-nestable v-model="params.structure">
+          <vue-nestable-handle
+            slot-scope="{ item }"
+            :item="item">
+
+            <div v-bind:class="[ (item.role == 'remove') ? 'removed' : '', !item.inToc ? 'not-in-toc' : '' ]">
+              <h2>
+                <icon :role="item.role"></icon>
+
+                <span class="material-icons" v-on:click="() => showPreview(item.xhtml)">visibility</span>
+
+                {{ item.filename }}: {{ item.title ? item.title : "—" }}
+              </h2>
+
+              <div class="controls">
+                <div class="role">
+                  <label title="chapter">
+                    <input type="radio" value="chapter" v-model="item.role">
+                    <span class="btn">
+                      <span class="material-icons">subject</span> <span class="desc">chapter</span>
+                    </span>
+                  </label>
+
+                  <label title="break">
+                    <input type="radio" value="break" v-model="item.role">
+                    <span class="btn">
+                      <span class="material-icons">photo</span> <span class="desc">break</span>
+                    </span>
+                  </label>
+
+                  <label title="colophon">
+                    <input type="radio" value="colophon" v-model="item.role">
+                    <span class="btn">
+                      <span class="material-icons">copyright</span> <span class="desc">colophon</span>
+                    </span>
+                  </label>
+
+                  <label title="remove">
+                    <input type="radio" value="remove" v-model="item.role">
+                    <span class="btn">
+                      <span class="material-icons">close</span> <span class="desc">remove</span>
+                    </span>
+                  </label>
+                </div>
+
+                <label class="show-in-toc">
+                  <span class="btn">
+                    <span class="material-icons">list</span> <span>in TOC</span>
+                  </span>
+
+                  <input type="checkbox" v-model="item.inToc">
+
+                  <span v-if="item.inToc" class="material-icons toggle-on">toggle_on</span>
+                  <span v-else class="material-icons toggle-off">toggle_off</span>
+                </label>
+
+                <label v-if="item.children && item.children.length" class="numbered-children">
+                  <input type="checkbox" v-model="item.numberedChildren">
+
+                  <span v-if="item.numberedChildren" class="material-icons">format_list_numbered</span>
+                  <span v-else class="material-icons">reorder</span>
+                </label>
+              </div>
+            </div>
+          </vue-nestable-handle>
+        </vue-nestable>
+
+        <div class="toc-preview">
+          <h2>TOC preview</h2>
+          <p>Note: Preview does not include sub-headings inside chapters.</p>
+          <ul>
+            <toc-item v-for="(item, index) in params.structure" :item="item" :key="item.filename" :possible-cover="index === 0"></toc-item>
+          </ul>
+
+          <hr>
+
+          <ul>
+            <li v-if="params.structure[0].role === 'break'">
+              <span class="filename">{{params.structure[0].filename}}</span>
+              <span class="title">Book cover</span>
+            </li>
+
+            <li v-for="item in params.structure" v-if="item.role === 'colophon'">
+              <span class="filename">{{item.filename}}</span>
+              <span class="title">Colophon (will be merged)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="metadata" v-if="tab == 'metadata'">
+        <label>
+          Title
+          <input type="text" v-model="params.metadata.title">
+        </label>
+        <label>
+          Subtitle
+          <input type="text" v-model="params.metadata.subtitle">
+        </label>
+        <label>
+          Author
+          <input type="text" v-model="params.metadata.author">
+        </label>
+        <label>
+          Publisher
+          <input type="text" v-model="params.metadata.publisher">
+        </label>
+        <label>
+          ISBN
+          <input type="text" v-model="params.metadata.isbn">
+        </label>
+        <label>
+          Identifier
+          <input type="text" v-model="params.metadata.identifier">
+        </label>
+        <label>
+          Language<br>
+          <select v-model="params.metadata.languageCode">
+            <option value="cs">czech</option>
+            <option value="en">english</option>
+          </select>
+        </label>
+
+        <h2>Chapter titles</h2>
+        <ul class="chapters">
+          <toc-item-edit-title v-for="item in params.structure" :item="item" :key="item.filename" @preview="showPreview"></toc-item-edit-title>
+        </ul>
+      </div>
+
+      <div v-if="tab == 'format'" class="els">
+        <autocomplete v-for="el in elements" v-bind:key="el.name" :label="el.title" rows="5" :items="epub.classes" textarea="true" v-model="params.elements[el.name]"></autocomplete>
+
+        <h2>Unused classes</h2>
+        <ul class="unused-classes">
+          <li v-for="name in unmatchedClassNames"><css-preview :name="name" :styles="css"></css-preview></li>
+        </ul>
+      </div>
+
+      <div v-if="tab == 'data'">
+        <p v-if="paramsUrl" class="paramsLink"><a target="_blank" :href="paramsUrl">params.json in the repository</a></p>
+
+        <p class="copyButton"><button id="copy-report" v-on:click="copyReport">Copy all data</button></p>
+
+        <textarea id="report">{{ exportedData }}</textarea>
+      </div>
+
+      <div v-if="previewUrl != null" class="view-chapter">
+        <div class="view-chapter-close" v-on:click="showPreview(null)">close</div>
+        <iframe :src="previewUrl"></iframe>
+      </div>
+    </div>
+  </main>
+
+  <script src="./assets/editor.js"></script>
+</body>
 </html>

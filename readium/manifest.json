@@ -1,0 +1,467 @@
+{
+  "@context": "https://readium.org/webpub-manifest/context.jsonld",
+  "metadata": {
+    "@type": "http://schema.org/Book",
+    "title": "Báječná léta pod psa",
+    "identifier": "urn:uuid:1cfcd01e-1805-4b28-9320-aefe540844ad",
+    "author": "Michal Viewegh",
+    "publisher": "Městská knihovna v Praze",
+    "modified": "2021-07-19T13:05:44.343Z",
+    "generator": "Adobe InDesign",
+    "Sigil version": "0.8.1"
+  },
+  "readingOrder": [
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_001.xhtml"
+    },
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_002.xhtml"
+    },
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_003.xhtml"
+    },
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_004.xhtml"
+    },
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_005.xhtml"
+    },
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_006.xhtml"
+    },
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_007.xhtml"
+    },
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_008.xhtml"
+    },
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_009.xhtml"
+    },
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_010.xhtml"
+    },
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_011.xhtml"
+    },
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_012.xhtml"
+    },
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_013.xhtml"
+    },
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_014.xhtml"
+    },
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_015.xhtml"
+    },
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_016.xhtml"
+    },
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_017.xhtml"
+    },
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_018.xhtml"
+    },
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_019.xhtml"
+    },
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_020.xhtml"
+    },
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_021.xhtml"
+    },
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_022.xhtml"
+    },
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_023.xhtml"
+    },
+    {
+      "type": "application/xhtml+xml",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_024.xhtml"
+    }
+  ],
+  "resources": [
+    {
+      "type": "application/x-dtbncx+xml",
+      "href": "OEBPS/toc.ncx"
+    },
+    {
+      "type": "text/css",
+      "href": "OEBPS/Styles/bajecna_le_idstyles.css"
+    },
+    {
+      "type": "image/png",
+      "href": "OEBPS/Images/image001_fmt.png"
+    },
+    {
+      "type": "image/png",
+      "href": "OEBPS/Images/image002_fmt.png"
+    },
+    {
+      "type": "image/png",
+      "href": "OEBPS/Images/upoutavka_eknihy_fmt.png"
+    },
+    {
+      "type": "image/png",
+      "href": "OEBPS/Images/obalka_bajecna_leta_s_k_fmt.png"
+    }
+  ],
+  "toc": [
+    {
+      "title": "I",
+      "children": [
+        {
+          "title": "1",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_006.xhtml#toc_marker-1-1"
+        },
+        {
+          "title": "2",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_006.xhtml#toc_marker-1-2"
+        },
+        {
+          "title": "3",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_006.xhtml#toc_marker-1-3"
+        },
+        {
+          "title": "4",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_006.xhtml#toc_marker-1-4"
+        },
+        {
+          "title": "5",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_006.xhtml#toc_marker-1-5"
+        },
+        {
+          "title": "6",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_006.xhtml#toc_marker-1-6"
+        },
+        {
+          "title": "7",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_006.xhtml#toc_marker-1-7"
+        }
+      ],
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_006.xhtml#toc_marker-1"
+    },
+    {
+      "title": "II. Z Kvidova deníku",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_007.xhtml#toc_marker-2"
+    },
+    {
+      "title": "III",
+      "children": [
+        {
+          "title": "1",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_008.xhtml#toc_marker-3-1"
+        },
+        {
+          "title": "2",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_008.xhtml#toc_marker-3-2"
+        },
+        {
+          "title": "3",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_008.xhtml#toc_marker-3-3"
+        },
+        {
+          "title": "4",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_008.xhtml#toc_marker-3-4"
+        }
+      ],
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_008.xhtml#toc_marker-3"
+    },
+    {
+      "title": "IV",
+      "children": [
+        {
+          "title": "1",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_009.xhtml#toc_marker-4-1"
+        },
+        {
+          "title": "2",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_009.xhtml#toc_marker-4-2"
+        },
+        {
+          "title": "3",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_009.xhtml#toc_marker-4-3"
+        },
+        {
+          "title": "4",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_009.xhtml#toc_marker-4-4"
+        },
+        {
+          "title": "5",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_009.xhtml#toc_marker-4-5"
+        }
+      ],
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_009.xhtml#toc_marker-4"
+    },
+    {
+      "title": "V",
+      "children": [
+        {
+          "title": "1",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_010.xhtml#toc_marker-5-1"
+        },
+        {
+          "title": "2",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_010.xhtml#toc_marker-5-2"
+        },
+        {
+          "title": "3",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_010.xhtml#toc_marker-5-3"
+        },
+        {
+          "title": "4",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_010.xhtml#toc_marker-5-4"
+        },
+        {
+          "title": "5",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_010.xhtml#toc_marker-5-5"
+        },
+        {
+          "title": "6",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_010.xhtml#toc_marker-5-6"
+        }
+      ],
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_010.xhtml#toc_marker-5"
+    },
+    {
+      "title": "VI",
+      "children": [
+        {
+          "title": "1",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_011.xhtml#toc_marker-6-1"
+        },
+        {
+          "title": "2",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_011.xhtml#toc_marker-6-2"
+        },
+        {
+          "title": "3",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_011.xhtml#toc_marker-6-3"
+        }
+      ],
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_011.xhtml#toc_marker-6"
+    },
+    {
+      "title": "VII",
+      "children": [
+        {
+          "title": "1",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_012.xhtml#toc_marker-7-1"
+        },
+        {
+          "title": "2",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_012.xhtml#toc_marker-7-2"
+        },
+        {
+          "title": "3",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_012.xhtml#toc_marker-7-3"
+        }
+      ],
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_012.xhtml#toc_marker-7"
+    },
+    {
+      "title": "VIII",
+      "children": [
+        {
+          "title": "1",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_013.xhtml#toc_marker-8-1"
+        },
+        {
+          "title": "2",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_013.xhtml#toc_marker-8-2"
+        },
+        {
+          "title": "3",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_013.xhtml#toc_marker-8-3"
+        }
+      ],
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_013.xhtml#toc_marker-8"
+    },
+    {
+      "title": "IX",
+      "children": [
+        {
+          "title": "1",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_014.xhtml#toc_marker-9-1"
+        },
+        {
+          "title": "2",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_014.xhtml#toc_marker-9-2"
+        },
+        {
+          "title": "3",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_014.xhtml#toc_marker-9-3"
+        },
+        {
+          "title": "4",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_014.xhtml#toc_marker-9-4"
+        }
+      ],
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_014.xhtml#toc_marker-9"
+    },
+    {
+      "title": "X",
+      "children": [
+        {
+          "title": "1",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_015.xhtml#toc_marker-10-1"
+        },
+        {
+          "title": "2",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_015.xhtml#toc_marker-10-2"
+        },
+        {
+          "title": "3",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_015.xhtml#toc_marker-10-3"
+        }
+      ],
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_015.xhtml#toc_marker-10"
+    },
+    {
+      "title": "XI",
+      "children": [
+        {
+          "title": "1",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_016.xhtml#toc_marker-11-1"
+        },
+        {
+          "title": "2",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_016.xhtml#toc_marker-11-2"
+        },
+        {
+          "title": "3",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_016.xhtml#toc_marker-11-3"
+        },
+        {
+          "title": "4",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_016.xhtml#toc_marker-11-4"
+        },
+        {
+          "title": "5",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_016.xhtml#toc_marker-11-5"
+        },
+        {
+          "title": "6",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_016.xhtml#toc_marker-11-6"
+        }
+      ],
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_016.xhtml#toc_marker-11"
+    },
+    {
+      "title": "XII",
+      "children": [
+        {
+          "title": "1",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_017.xhtml#toc_marker-12-1"
+        },
+        {
+          "title": "2",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_017.xhtml#toc_marker-12-2"
+        },
+        {
+          "title": "3",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_017.xhtml#toc_marker-12-3"
+        }
+      ],
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_017.xhtml#toc_marker-12"
+    },
+    {
+      "title": "XIII",
+      "children": [
+        {
+          "title": "1",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_018.xhtml#toc_marker-13-1"
+        },
+        {
+          "title": "2",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_018.xhtml#toc_marker-13-2"
+        },
+        {
+          "title": "3",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_018.xhtml#toc_marker-13-3"
+        }
+      ],
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_018.xhtml#toc_marker-13"
+    },
+    {
+      "title": "XIV",
+      "children": [
+        {
+          "title": "1",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_019.xhtml#toc_marker-14-1"
+        },
+        {
+          "title": "2",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_019.xhtml#toc_marker-14-2"
+        },
+        {
+          "title": "3",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_019.xhtml#toc_marker-14-3"
+        },
+        {
+          "title": "4",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_019.xhtml#toc_marker-14-4"
+        }
+      ],
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_019.xhtml#toc_marker-14"
+    },
+    {
+      "title": "XV",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_020.xhtml#toc_marker-15"
+    },
+    {
+      "title": "XVI",
+      "children": [
+        {
+          "title": "1",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_021.xhtml#toc_marker-16-1"
+        },
+        {
+          "title": "2",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_021.xhtml#toc_marker-16-2"
+        },
+        {
+          "title": "3",
+          "href": "OEBPS/Text/bajecna_leta_pod_psa_021.xhtml#toc_marker-16-3"
+        }
+      ],
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_021.xhtml#toc_marker-16"
+    },
+    {
+      "title": "XVII",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_022.xhtml#toc_marker-17"
+    },
+    {
+      "title": "EPILOG",
+      "href": "OEBPS/Text/bajecna_leta_pod_psa_023.xhtml#toc_marker-18"
+    }
+  ]
+}
