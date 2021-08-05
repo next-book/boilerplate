@@ -26,6 +26,10 @@ jobs:
         id: epub-exists
         run: echo "::set-output name=result::$(sh epub-exists.sh)"
 
+      - name: Update EPUB converter to the latest revision
+        if: ${{ steps.epub-exists.outputs.result == 'true' }}
+        run: "npm install @next-book/epub2nb@latest"
+
       - name: Convert EPUB
         if: ${{ steps.epub-exists.outputs.result == 'true' }}
         run: npx epub2nb -s epub --gh $GITHUB_REPOSITORY
