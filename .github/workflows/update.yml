@@ -28,6 +28,7 @@ jobs:
           mv _current_bp/config.toml .
           mv _current_bp/package.json .
           mv _current_bp/package-lock.json .
+          rm -rf _current_bp
 
       - name: Push converted content 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
