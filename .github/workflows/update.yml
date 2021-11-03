@@ -1,0 +1,36 @@
+name: Self-update boilerplate
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: false
+          fetch-depth: 0
+
+      - name: Clone current boilerplate
+        run: git clone https://github.com/next-book/boilerplate.git _current_bp
+
+      - name: Remove old files
+        run: rm -rf .github layouts assets static config.toml README.* package.json package-lock.json
+
+      - name: Move new files into place
+        run: |
+          mv _current_bp/.github .
+          mv _current_bp/layouts .
+          mv _current_bp/assets .
+          mv _current_bp/static .
+          mv _current_bp/README.* .
+          mv _current_bp/config.toml .
+          mv _current_bp/package.json .
+          mv _current_bp/package-lock.json .
+
+      - name: Push converted content 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: main
+          folder: .
