@@ -27,6 +27,7 @@ jobs:
         run: |
           curl -sL https://github.com/sass/dart-sass-embedded/releases/download/1.0.0-beta.12/sass_embedded-1.0.0-beta.12-linux-x64.tar.gz | tar xvz
           export PATH="$PATH:$(realpath sass_embedded)"
+          echo $PATH
 
       - name: Check if there is an EPUB waiting for conversion
         id: epub-exists
