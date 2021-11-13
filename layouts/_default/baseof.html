@@ -10,7 +10,8 @@
 
     <title>{{ .Title }}</title>
 
-    {{ $style := resources.Get "style/style.scss" | toCSS | minify }}
+    {{ $options := (dict "transpiler" "dartsass") }}
+    {{ $style := resources.Get "style/style.scss" | toCSS $options | minify }}
     {{ $styleHash:= $style | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" media="screen" integrity="{{ $styleHash.Data.Integrity }}">
   </head>
