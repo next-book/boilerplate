@@ -3,23 +3,31 @@
   "keywords": [],
   "published": 2020,
   "title": "Next-book Boilerplate",
-  "identifier": "name-next-book-boilerplate-2020-735e389",
-  "revision": "735e389",
+  "identifier": "name-next-book-boilerplate-2020-80585b1",
+  "revision": "80585b1",
   "generatedAt": {
-    "date": "Sat Nov 13 2021 15:16:47 GMT+0000 (Coordinated Universal Time)",
-    "unix": 1636816607755
+    "date": "Sun Nov 14 2021 16:18:57 GMT+0000 (Coordinated Universal Time)",
+    "unix": 1636906737710
   },
   "documents": [
     {
       "title": "Next-book boilerplate",
       "file": "index.html",
-      "words": 0,
-      "chars": 0,
-      "ideas": 0,
+      "words": 6,
+      "chars": 43,
+      "ideas": 4,
       "role": "index",
       "order": null,
       "next": "where-i-lived-and-what-i-lived-for.html",
-      "toc": []
+      "toc": [
+        {
+          "index": 1,
+          "level": 1,
+          "name": "Next-book Boilerplate",
+          "id": "chunk2",
+          "children": []
+        }
+      ]
     },
     {
       "title": "Reading",
@@ -104,9 +112,9 @@
   ],
   "totals": {
     "all": {
-      "words": 19051,
-      "chars": 102900,
-      "ideas": 714
+      "words": 19057,
+      "chars": 102943,
+      "ideas": 718
     },
     "chapters": {
       "words": 19051,
