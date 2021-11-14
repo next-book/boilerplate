@@ -18,6 +18,6 @@ static:
   - scripts
   - fonts
   - images
+  - template-images
   - favicon.png
 ---
-

@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="{{ $style.Permalink }}" media="screen" integrity="{{ $styleHash.Data.Integrity }}">
   </head>
   <body {{ with .Params.class }}class="{{ . }}"{{ end }}>
-    {{ (.Site.GetPage "/_book").Content }}
+    <div id="ui-content">
+      {{ (.Site.GetPage "/_book").Content }}
+    </div>
 
     {{ block "content" . }}{{ end }}
 

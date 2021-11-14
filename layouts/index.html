@@ -1,13 +1,22 @@
 {{ define "content" }}
-<header class="hero">
-  <h1>
-    {{ .Title }}
-  </h1>
-  <p class="author">{{ .Params.author }}</p>
-</header>
-<div class="content">
-    <div class="wrapper">
-      {{ .Content }}
+{{ $book := (.Site.GetPage "/_book").Params.meta }}
+<main>
+  <div id="title-wrapper">
+    <div id="title">
+        <h2 class="author">{{ $book.author }}</h2>
+        <h1 class="title">{{ $book.title }}</h1>
+      </div>
+
+      <div class="wrapper">
+        <div class="animation">
+              <div class="circles anim-one"></div>
+              <div class="circles anim-two"></div>
+          </div>
+      </div>
+
+      <h3 class="publisher">mkp</h3>
+      <h3 class="genre">beletrie</h3>
+    </div>
   </div>
-</div>
+</main>
 {{ end }}
