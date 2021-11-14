@@ -1,11 +1,2 @@
-// replaced due to dart-sass/dart-sass-embedded conflict as of July 22 2021
-// @import "./../../node_modules/@next-book/interface/src/scss/style.scss";
-@import "./../../node_modules/@next-book/interface/dist/interface";
+@use "./../../node_modules/@next-book/interface/src/scss/style.scss" as interface;
 
-.hero {
-  padding: 10vh 10vw;
-
-  p {
-    text-transform: uppercase;
-  }
-}
