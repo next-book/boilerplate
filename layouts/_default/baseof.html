@@ -14,6 +14,14 @@
     {{ $style := resources.Get "style/style.scss" | toCSS $options | minify }}
     {{ $styleHash:= $style | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" media="screen" integrity="{{ $styleHash.Data.Integrity }}">
+
+    {{ $accentBase := int (substr (replaceRE "[abcdef]" "" (md5 (.Site.GetPage "/_book").Params.meta.edition)) -6) }}
+    {{ $accentHue := mod (add (mod $accentBase 360) 309) 360 }}
+    <style>
+      :root {
+        --accent-color: hsl({{ $accentHue }}, 71%, 37%);
+      }
+    </style>
   </head>
   <body {{ with .Params.class }}class="{{ . }}"{{ end }}>
     <div id="ui-content">
