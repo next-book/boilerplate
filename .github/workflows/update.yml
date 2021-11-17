@@ -20,6 +20,19 @@ jobs:
 
       - name: Move new files into place
         run: |
+          shopt -s dotglob
+          mkdir .github
+          mkdir layouts
+          mkdir assets
+          mkdir static
+          mv _current_bp/.github/* .github
+          mv _current_bp/layouts/* layouts
+          mv _current_bp/assets/* assets
+          mv _current_bp/static/* static
+          mv _current_bp/README.* .
+          mv _current_bp/config.toml .
+          mv _current_bp/package.json .
+          mv _current_bp/package-lock.json .
           mv _current_bp/.github/* .github
           mv _current_bp/layouts/* layouts
           mv _current_bp/assets/* assets
