@@ -5,11 +5,11 @@
   "published": 2020,
   "publisher": "mkp",
   "title": "Next-book Boilerplate",
-  "identifier": "name-next-book-boilerplate-2020-381a477",
-  "revision": "381a477",
+  "identifier": "name-next-book-boilerplate-2020-7a2c7d1",
+  "revision": "7a2c7d1",
   "generatedAt": {
-    "date": "Mon Nov 15 2021 07:41:24 GMT+0000 (Coordinated Universal Time)",
-    "unix": 1636962084542
+    "date": "Wed Nov 17 2021 08:03:12 GMT+0000 (Coordinated Universal Time)",
+    "unix": 1637136192566
   },
   "documents": [
     {
@@ -18,7 +18,7 @@
       "words": 6,
       "chars": 43,
       "ideas": 4,
-      "role": "index",
+      "role": "cover",
       "order": null,
       "next": "where-i-lived-and-what-i-lived-for.html",
       "toc": [
@@ -26,7 +26,7 @@
           "index": 1,
           "level": 1,
           "name": "Next-book Boilerplate",
-          "id": "chunk2",
+          "id": null,
           "children": []
         }
       ]
@@ -46,7 +46,7 @@
           "index": 0,
           "level": 1,
           "name": "Reading",
-          "id": "chunk1",
+          "id": null,
           "children": []
         }
       ]
@@ -54,9 +54,9 @@
     {
       "title": "Solitude",
       "file": "solitude.html",
-      "words": 3450,
-      "chars": 18237,
-      "ideas": 137,
+      "words": 3440,
+      "chars": 18229,
+      "ideas": 130,
       "role": "chapter",
       "order": 3,
       "prev": "sounds.html",
@@ -66,7 +66,7 @@
           "index": 0,
           "level": 1,
           "name": "Solitude",
-          "id": "chunk1",
+          "id": null,
           "children": []
         }
       ]
@@ -74,9 +74,9 @@
     {
       "title": "Sounds",
       "file": "sounds.html",
-      "words": 5737,
-      "chars": 31441,
-      "ideas": 213,
+      "words": 5722,
+      "chars": 31414,
+      "ideas": 204,
       "role": "chapter",
       "order": 2,
       "prev": "reading.html",
@@ -86,7 +86,7 @@
           "index": 0,
           "level": 1,
           "name": "Sounds",
-          "id": "chunk1",
+          "id": null,
           "children": []
         }
       ]
@@ -94,9 +94,9 @@
     {
       "title": "Where I Lived, and What I Lived For",
       "file": "where-i-lived-and-what-i-lived-for.html",
-      "words": 6105,
-      "chars": 32356,
-      "ideas": 235,
+      "words": 6095,
+      "chars": 32342,
+      "ideas": 229,
       "role": "chapter",
       "order": 0,
       "prev": null,
@@ -106,7 +106,7 @@
           "index": 0,
           "level": 1,
           "name": "Where I Lived, and What I Lived For",
-          "id": "chunk1",
+          "id": null,
           "children": []
         }
       ]
@@ -114,14 +114,14 @@
   ],
   "totals": {
     "all": {
-      "words": 19057,
-      "chars": 102943,
-      "ideas": 718
+      "words": 19022,
+      "chars": 102894,
+      "ideas": 696
     },
     "chapters": {
-      "words": 19051,
-      "chars": 102900,
-      "ideas": 714
+      "words": 19016,
+      "chars": 102851,
+      "ideas": 692
     }
   }
 }
