@@ -2,7 +2,7 @@
 
 /* global self, caches, fetch */
 
-const CACHE = 'cache-a7985e6';
+const CACHE = 'cache-129dfd9';
 
 self.addEventListener('install', e => {
   e.waitUntil(precache()).then(() => self.skipWaiting());
@@ -40,7 +40,7 @@ self.addEventListener('activate', event => {
 });
 
 function precache() {
-  return caches.open(CACHE).then(cache => cache.addAll(["./","./favicon.png","./manifest.json","./reading.html","./index.html","./solitude.html","./sounds.html","./where-i-lived-and-what-i-lived-for.html","./fonts/LiterataTT_var.woff2","./fonts/LiterataTT_var_OFL.txt","./fonts/SpaceGroteskVF.woff2","./fonts/SpaceGroteskVF_OFL.txt","./scripts/bundle.js","./style/style.min.css","./template-images/circles.png"]));
+  return caches.open(CACHE).then(cache => cache.addAll(["./","./favicon.png","./index.html","./manifest.json","./reading.html","./solitude.html","./sounds.html","./where-i-lived-and-what-i-lived-for.html","./fonts/LiterataTT_var.woff2","./fonts/LiterataTT_var_OFL.txt","./fonts/SpaceGroteskVF.woff2","./fonts/SpaceGroteskVF_OFL.txt","./scripts/bundle.js","./style/style.min.css","./template-images/circles.png"]));
 }
 
 self.addEventListener('fetch', e => {
