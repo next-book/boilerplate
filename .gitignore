@@ -1,5 +1,6 @@
 .DS_Store
 assets/scripts/bundle.js
 node_modules/*
+sass_embedded/*
 _book/*
 _temp/*

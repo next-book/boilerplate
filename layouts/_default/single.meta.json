@@ -2,4 +2,5 @@
 {{- .Scratch.SetInMap "output" "chapters" .Params.chapters -}}
 {{- .Scratch.SetInMap "output" "static" .Params.static -}}
 {{- .Scratch.SetInMap "output" "languageCode" .Params.languageCode -}}
+{{- .Scratch.SetInMap "output" "tocBase" .Params.tocBase -}}
 {{- .Scratch.Get "output" | jsonify -}}

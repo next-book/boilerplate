@@ -15,6 +15,17 @@ chapters:
   - reading.html
   - sounds.html
   - solitude.html
+tocBase:
+  - link: where-i-lived-and-what-i-lived-for.html
+    title: Where-i-lived-and-what-i-lived-for
+    numberedChildren: true;
+    children:
+      - link: reading.html
+        title: Reading
+      - link: sounds.html
+        title: Sounds
+  - link: solitude.html
+    title: Solitude
 static:
   - style
   - scripts
