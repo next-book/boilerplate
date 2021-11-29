@@ -1,7 +1,7 @@
 const fs = require("fs");
 const book = JSON.parse(fs.readFileSync("./_temp/book.json", "utf8"));
 
-book.chapters.forEach(filename => {
+book.readingOrder.forEach(filename => {
   const path = "./_temp/" + filename;
   const text = fs.readFileSync(path, "utf8");
   fs.writeFileSync(
