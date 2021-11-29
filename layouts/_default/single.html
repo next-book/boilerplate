@@ -1,7 +1,7 @@
 {{ define "content" }}
 <div class="content">
   <main>
-    <h1>{{ .Title | markdownify }}</h1>
+    <h1{{ if .Params.hiddenTitle }} class="hidden-title"{{ end }}>{{ .Title | markdownify }}</h1>
     {{ with .Params.authors }}<p class="authors">{{ . | markdownify }}</p>{{ end }}
     {{ partial "typo.html" .RawContent }}
   </main>
