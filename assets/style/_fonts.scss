@@ -5,7 +5,13 @@
 }
 
 @font-face {
-  font-family: Literata;
-  src: url(../fonts/LiterataTT_var.woff2);
-  font-weight: normal;
+  font-family: LiterataVar;
+  src: url(../fonts/Literata-var.woff2);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: LiterataVar;
+  src: url(../fonts/Literata-Italic-var.woff2);
+  font-style: italic;
 }

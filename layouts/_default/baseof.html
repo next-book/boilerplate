@@ -8,7 +8,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     {{ with .Params.role }}<meta name="nb-role" content="{{ . }}">{{ end }}
 
-    <title>{{ .Title }}</title>
+    {{ $book := (.Site.GetPage "/_book").Params.meta }}
+    <title>{{ .Title }}{{ with .Title }} &bull; {{ end }}{{ $book.title }}</title>
 
     {{ $options := (dict "transpiler" "dartsass") }}
     {{ $style := resources.Get "style/style.scss" | toCSS $options | minify }}

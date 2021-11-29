@@ -1,4 +1,7 @@
 #title-wrapper {
+  position: relative;
+  z-index: 1;
+
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -58,7 +61,7 @@
   }
 
   h2.author {
-    font-family: Literata;
+    font-family: LiterataVar;
     font-variation-settings: "wght" 200, "opsz" 72;
     font-size: 0.9em;
 
