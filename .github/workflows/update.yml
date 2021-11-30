@@ -14,13 +14,12 @@ jobs:
 
       - name: Remove old files
         run: |
-          rm -rf layouts assets static config.toml README.* package.json package-lock.json filter.js
+          rm -rf layouts assets static config.toml README.* package.json package-lock.json filters.js
 
       - name: Move new files into place
         run: |
           shopt -s dotglob
           git clone https://github.com/next-book/boilerplate.git _current_bp
-          mv _current_bp/filters.js filters.js
           mv _current_bp/layouts layouts
           mv _current_bp/assets assets
           mv _current_bp/static static
@@ -28,6 +27,7 @@ jobs:
           mv _current_bp/config.toml .
           mv _current_bp/package.json .
           mv _current_bp/package-lock.json .
+          mv _current_bp/filters.js filters.js
           rm -rf _current_bp
 
       - uses: stefanzweifel/git-auto-commit-action@v4
