@@ -76,7 +76,8 @@
 
     h1.title {
       font-size: 1em;
-      font-variation-settings: "wght" 400;
+      font-weight: 500;
+      font-variation-settings: "wght" 515;
       font-family: SpaceGrotesk;
       text-indent: -0.7em;
 
@@ -96,6 +97,9 @@
 
     margin: 0;
     padding: 0;
+
+    color: black;
+    font-weight: 400;
   }
 
   h3.publisher {
