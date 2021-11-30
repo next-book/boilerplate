@@ -58,32 +58,33 @@
 
     position: relative;
     z-index: 3;
-  }
 
-  h2.author {
-    font-family: LiterataVar;
-    font-variation-settings: "wght" 200, "opsz" 72;
-    font-size: 0.9em;
+    h2.author {
+      font-family: LiterataVar;
+      font-variation-settings: "wght" 200, "opsz" 72;
+      font-weight: 200;
+      font-size: 0.9em;
 
-    margin: 0;
-    padding-bottom: 0.2em;
+      margin: 0;
+      padding-bottom: 0.2em;
 
-    color: white;
+      color: white;
 
-    position: relative;
-    z-index: 3;
-  }
+      position: relative;
+      z-index: 3;
+    }
 
-  h1.title {
-    font-size: 1em;
-    font-variation-settings: "wght" 615;
+    h1.title {
+      font-size: 1em;
+      font-variation-settings: "wght" 400;
+      font-family: SpaceGrotesk;
+      text-indent: -0.7em;
 
-    text-indent: -0.7em;
+      margin: 0;
 
-    margin: 0;
-
-    position: relative;
-    z-index: 3;
+      position: relative;
+      z-index: 3;
+    }
   }
 
   h3 {

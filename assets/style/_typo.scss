@@ -1,10 +1,11 @@
 main {
   h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     line-height: 6rem;
     margin-bottom: 13rem;
 
     font-family: LiterataVar;
+    font-weight: 200;
     font-variation-settings: "wght" 200, "opsz" 72;
   }
 
@@ -12,6 +13,7 @@ main {
     margin-bottom: 0;
     text-indent: 3rem;
     font-family: LiterataVar;
+    font-weight: 400;
     font-variation-settings: "wght" 400, "opsz" 12;
     font-size: 1rem;
     line-height: 1.9rem;
