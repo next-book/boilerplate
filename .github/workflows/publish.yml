@@ -23,7 +23,7 @@ jobs:
         id: epub-exists
         run: echo "::set-output name=result::$(sh epub-exists.sh)"
 
-      - name: Extract version from package.json
+      - name: Get extractionComplete from params.json
         uses: sergeysova/jq-action@v2
         id: extraction-complete
         with:
