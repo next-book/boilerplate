@@ -81,7 +81,14 @@ jobs:
           submodules: false
           fetch-depth: 0
 
+      - name: File params.json contains book info (null if not)
+        uses: sergeysova/jq-action@v2
+        id: book-info-set
+        with:
+          cmd: "jq .readingOrder epub/params.json"
+
       - name: Cache npm and output
+        if: ${{ steps.book-info-set.outputs.value != 'null' }}
         uses: actions/cache@v2
         id: extracted-cache
         with:
@@ -91,36 +98,42 @@ jobs:
           key: extracted-${{ runner.os }}-${{ github.run_number }}
 
       - name: Cache book
+        if: ${{ steps.book-info-set.outputs.value != 'null' }}
         uses: actions/cache@v2
         with:
           path: ./_book
           key: published-${{ runner.os }}-${{ github.run_number }}
 
       - uses: actions/setup-node@v2
+        if: ${{ steps.book-info-set.outputs.value != 'null' }}
         with:
           node-version: "14"
 
       - name: Install dependencies
+        if: ${{ steps.book-info-set.outputs.value != 'null' }}
         run: |
           npm install
 
       - name: Move extracted content into place
-        if: steps.extracted-cache.outputs.cache-hit == 'true'
+        if: ${{ steps.book-info-set.outputs.value != 'null' && steps.extracted-cache.outputs.cache-hit == 'true' }}
         run: |
           rm -rf content
           cp -R epub/content content
 
       - name: Setup Hugo
+        if: ${{ steps.book-info-set.outputs.value != 'null' }}
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: "0.81.0"
           extended: true
 
       - name: Download dart-sass
+        if: ${{ steps.book-info-set.outputs.value != 'null' }}
         run: |
           curl -sL https://github.com/sass/dart-sass-embedded/releases/download/1.0.0-beta.12/sass_embedded-1.0.0-beta.12-linux-x64.tar.gz | tar xvz
 
       - name: Build
+        if: ${{ steps.book-info-set.outputs.value != 'null' }}
         run: |
           export PATH="$PATH:$(realpath sass_embedded)"
           npm run build
