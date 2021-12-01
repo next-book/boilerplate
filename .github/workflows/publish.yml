@@ -85,7 +85,7 @@ jobs:
         uses: sergeysova/jq-action@v2
         id: book-info-set
         with:
-          cmd: "jq .readingOrder epub/params.json"
+          cmd: "jq .params epub/params.json"
 
       - name: Cache npm and output
         if: ${{ steps.book-info-set.outputs.value != 'null' }}
