@@ -10,7 +10,7 @@ meta:
   published: 2020
   keywords: []
   edition: beletrie
-chapters:
+readingOrder:
   - where-i-lived-and-what-i-lived-for.html
   - reading.html
   - sounds.html

@@ -35,7 +35,7 @@ Book needs to be in a git repository to properly version itself, so if you downl
 
 - Edit book contents in `content` folder:
   - Book chapters are in `.md` files.
-  - Book metadata is in `_book.md` file. (You need to specify reading order of chapters in `chapters` array.)
+  - Book metadata is in `_book.md` file. (You need to specify reading order of chapters in `readingOrder` array.)
   - Book opening page is in `_index.md`.
 - Edit book layout in `layouts` folder. This boilerplate uses [hugo](https://gohugo.io/) for HTML generation.
 - Edit visual styles and scripts in `assets` folder.

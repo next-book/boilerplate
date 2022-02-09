@@ -47,7 +47,7 @@ Kniha musí být v gitovém repozitáři, aby se správně verzovala, takže pok
 
 - Upravte soubory ve složce `content`:
   - Kapitoly knihy jsou v souborech s koncovkou `.md`.
-  - Metadata o knize jsou v souboru `_book.md`. (Zde je potřebné specifikovat pořadí kapitol v poli `chapters`.)
+  - Metadata o knize jsou v souboru `_book.md`. (Zde je potřebné specifikovat pořadí kapitol v poli `readingOrder`.)
   - Titulní strana je v souboru `_index.md`.
 - Struktura knihy je definovaná v HTML souborech ve složce `layouts`. Tento boilerplate používá pro generování HTML kódu nástroj [hugo](https://gohugo.io/).
 - Vizuální styl a skripty můžete upravit v souborech ve složce `assets`. Vizuální styl je možné definovat ve třech módech (světlý, tmavý, sépie) a je nutné dávat pozor, abyste omylem nepředefinovali některou z barev pro všechny módy (a nedošlo tak třeba k zobrazení tmavého textu na tmavém pozadí).
