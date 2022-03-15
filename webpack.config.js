@@ -6,6 +6,9 @@ module.exports = {
     path: path.resolve(__dirname, "./assets/scripts/"),
     filename: "bundle.js"
   },
+  resolve: {
+    symlinks: false,
+  },
   module: {
     rules: [
       {
