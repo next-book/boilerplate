@@ -9,7 +9,7 @@
     {{ with .Params.role }}<meta name="nb-role" content="{{ . }}">{{ end }}
 
     {{ $book := (.Site.GetPage "/_book").Params.meta }}
-    <title>{{ .Title }}{{ with .Title }} &bull; {{ end }}{{ $book.title }}</title>
+    <title>{{ with .Title }}{{ . | markdownify | plainify | htmlUnescape }}{{ else }}{{ $book.title }}{{ end }}</title>
 
     {{ $options := (dict "transpiler" "dartsass") }}
     {{ $style := resources.Get "style/style.scss" | toCSS $options | minify }}
@@ -23,6 +23,10 @@
         --accent-color: hsl({{ $accentHue }}, 71%, 37%);
       }
     </style>
+
+    {{ with .Params.promo }}
+      <link rel="stylesheet" href="{{ .baseUrl }}promo.css">
+    {{ end }}
   </head>
   <body {{ with .Params.class }}class="{{ . }}"{{ end }}>
     <div id="ui-content">
@@ -34,5 +38,9 @@
     {{ $scripts := resources.Get "scripts/bundle.js" }}
     {{ $scriptsHash := $scripts | resources.Fingerprint }}
     <script type="text/javascript" src="{{ $scripts.Permalink }}" integrity="{{ $scriptsHash.Data.Integrity }}"></script>
+
+    {{ with .Params.promo }}
+      <script type="text/javascript" src="{{ .baseUrl }}promo.js"></script>
+    {{ end }}
   </body>
 </html>

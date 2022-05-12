@@ -1,0 +1,49 @@
+#promo {
+  .promo-dark,
+  .promo-light {
+    img {
+      display: block;
+      margin: 20vh auto;
+    }
+  }
+}
+
+.promo-dark {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .promo-light {
+    display: none;
+  }
+  .promo-dark {
+    display: block;
+  }
+}
+
+body.nb-color-scheme-light {
+  .promo-light {
+    display: block;
+  }
+  .promo-dark {
+    display: none;
+  }
+}
+
+body.nb-color-scheme-dark {
+  .promo-light {
+    display: none;
+  }
+  .promo-dark {
+    display: block;
+  }
+}
+
+body.nb-color-scheme-sepia {
+  .promo-light {
+    display: block;
+  }
+  .promo-dark {
+    display: none;
+  }
+}
