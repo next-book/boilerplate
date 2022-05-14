@@ -1,9 +1,26 @@
 {{ define "content" }}
 <div class="content">
   <main>
-    <h1{{ if .Params.hiddenTitle }} class="hidden-title"{{ end }}>{{ .Title | markdownify }}</h1>
-    {{ with .Params.authors }}<p class="authors">{{ . | markdownify }}</p>{{ end }}
-    {{ partial "typo.html" .RawContent }}
+    {{ with .Params.promo }}
+      <div id="promo">
+        <div class="promo-light">
+          <a href="{{ .link }}">
+            <img src="{{ .baseUrl }}{{ .logoLight }}" title="{{ .publisher }}" alt="Logo: {{ .publisher }}" style="width: {{ .logoWidth | safeCSS }}">
+          </a>
+        </div>
+        <div class="promo-dark">
+          <a href="{{ .link }}">
+            <img src="{{ .baseUrl }}{{ .logoDark }}" title="{{ .publisher }}" alt="Logo: {{ .publisher }}" style="width: {{ .logoWidth | safeCSS }}">
+          </a>
+        </div>
+        <div class="promo-custom-light"></div>
+        <div class="promo-custom-dark"></div>
+      </div>
+    {{ else }}
+      <h1{{ if .Params.hiddenTitle }} class="hidden-title"{{ end }}>{{ .Title | markdownify }}</h1>
+      {{ with .Params.authors }}<p class="authors">{{ . | markdownify }}</p>{{ end }}
+      {{ partial "typo.html" .RawContent }}
+    {{ end }}
   </main>
 </div>
 {{ end }}
