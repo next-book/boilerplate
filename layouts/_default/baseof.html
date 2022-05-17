@@ -28,7 +28,7 @@
       <link rel="stylesheet" href="{{ .baseUrl }}promo.css">
     {{ end }}
   </head>
-  <body {{ with .Params.class }}class="{{ . }}"{{ end }}>
+  <body class="{{ with .Params.class }}{{ . }}{{ end }} {{ with .Params.contentType }}content-{{ . }}{{ end }}">
     <div id="ui-content">
       {{ (.Site.GetPage "/_book").Content }}
     </div>

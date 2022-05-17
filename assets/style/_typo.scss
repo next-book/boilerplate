@@ -1,17 +1,41 @@
+body {
+  --p-indent: 3rem;
+  --p-margin-bottom: 0;
+
+  --h1-font-size: 4rem;
+  --h1-line-height: 6rem;
+  --h1-margin-bottom: 13rem;
+  --h1-font-family: LiterataVar;
+  --h1-font-weight: 200;
+  --h1-font-variation-settings: "wght" 200, "opsz" 72;
+}
+
+.content-poetry {
+  --p-indent: 0;
+  --p-margin-bottom: 1.9rem;
+
+  --h1-font-size: 1.2rem;
+  --h1-line-height: 1.9rem;
+  --h1-margin-bottom: 1.9rem;
+  --h1-font-family: SpaceGrotesk;
+  --h1-font-weight: 700;
+  --h1-font-variation-settings: normal;
+}
+
 main {
   h1 {
-    font-size: 4rem;
-    line-height: 6rem;
-    margin-bottom: 13rem;
+    font-size: var(--h1-font-size);
+    line-height: var(--h1-line-height);
+    margin-bottom: var(--h1-margin-bottom);
 
-    font-family: LiterataVar;
-    font-weight: 200;
-    font-variation-settings: "wght" 200, "opsz" 72;
+    font-family: var(--h1-font-family);
+    font-weight: var(--h1-font-weight);
+    font-variation-settings: var(--h1-font-variation-settings);
   }
 
   p {
-    margin-bottom: 0;
-    text-indent: 3rem;
+    margin-bottom: var(--p-margin-bottom);
+    text-indent: var(--p-indent);
     font-family: LiterataVar;
     font-weight: 400;
     font-variation-settings: "wght" 400, "opsz" 12;
