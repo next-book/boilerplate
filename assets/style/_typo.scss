@@ -46,7 +46,12 @@ main {
   blockquote,
   q,
   blockquote p {
-    font-family: LiterataVarItalic;
+    font-family: LiterataVar;
+    font-style: italic;
+  }
+  
+  blockquote {
+    margin: 1.9rem 0;
   }
 
   h1 + p,
