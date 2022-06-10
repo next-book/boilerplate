@@ -54,9 +54,16 @@ main {
     margin: 1.9rem 0;
   }
 
+  blockquote {
+    margin-left: var(--p-indent);
+    margin-right: var(--p-indent);
+  }
+
   h1 + p,
   h2 + p,
-  h3 + p {
+  h3 + p,
+  section p:first-child,
+  blockquote p:first-child {
     text-indent: 0;
   }
 }
