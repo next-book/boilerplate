@@ -1,6 +1,8 @@
 body {
   --p-indent: 3rem;
   --p-margin-bottom: 0;
+  --p-line-height: 1.9rem;
+  --section-vertical-margin: 3rem;
 
   --h1-font-size: 4rem;
   --h1-line-height: 6rem;
@@ -13,6 +15,8 @@ body {
 .content-poetry {
   --p-indent: 0;
   --p-margin-bottom: 1.9rem;
+  --p-line-height: 1.9rem;
+  --section-vertical-margin: 1.5rem;
 
   --h1-font-size: 1.2rem;
   --h1-line-height: 1.9rem;
@@ -40,7 +44,11 @@ main {
     font-weight: 400;
     font-variation-settings: "wght" 400, "opsz" 12;
     font-size: 1rem;
-    line-height: 1.9rem;
+    line-height: var(--p-line-height);
+  }
+
+  section {
+    margin-bottom: var(--section-vertical-margin);
   }
 
   blockquote,
@@ -49,14 +57,13 @@ main {
     font-family: LiterataVar;
     font-style: italic;
   }
-  
+
   blockquote {
     margin: 1.9rem 0;
   }
 
   blockquote {
-    margin-left: var(--p-indent);
-    margin-right: var(--p-indent);
+    margin-left: var(--p-line-height) var(--p-indent);
   }
 
   h1 + p,
