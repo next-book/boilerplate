@@ -66,6 +66,14 @@ main {
     margin-left: var(--p-line-height) var(--p-indent);
   }
 
+  .centered {
+    margin: 0 var(--p-indent);
+
+    p {
+      text-align: center;
+    }
+  }
+
   h1 + p,
   h2 + p,
   h3 + p,
