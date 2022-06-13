@@ -4,3 +4,4 @@ node_modules/*
 sass_embedded/*
 _book/*
 _temp/*
+.hugo_build.lock
