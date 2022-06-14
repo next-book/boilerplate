@@ -35,5 +35,6 @@ static:
   - fonts
   - images
   - template-images
+  - assets
   - favicon.png
 ---
