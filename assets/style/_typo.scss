@@ -6,7 +6,7 @@ body {
 
   --h1-font-size: 4rem;
   --h1-line-height: 6rem;
-  --h1-margin-bottom: 13rem;
+  --h1-margin-bottom: clamp(4rem, 30vh, 13rem);
   --h1-font-family: LiterataVar;
   --h1-font-weight: 200;
   --h1-font-variation-settings: "wght" 200, "opsz" 72;
@@ -72,15 +72,23 @@ main {
 
   hr {
     display: block;
-    width: 39%;
-    margin: var(--section-vertical-margin) auto;
-    border: solid var(--accent-color);
-    border-width: 1px 0 0;
+    margin: 0;
+    border: none;
+
+    &::before {
+      content: "* * *";
+      display: block;
+      color: var(--accent-color);
+      font-size: 1.5rem;
+      margin: 1.9rem auto 1.4rem;
+      text-align: center;
+    }
   }
 
   h1 + p,
   h2 + p,
   h3 + p,
+  hr + p,
   section p:first-child,
   blockquote p:first-child {
     text-indent: 0;

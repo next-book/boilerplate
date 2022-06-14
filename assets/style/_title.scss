@@ -1,6 +1,16 @@
+@use "./../../node_modules/@next-book/interface/src/scss/conf";
+
 #title-wrapper {
+  --title-size: 14vh;
+  --title-line-height: 14vh;
+
+  @media (max-aspect-ratio: 1/1) {
+    --title-size: 12vw;
+    --title-line-height: 13vw;
+  }
+
   position: relative;
-  z-index: 1;
+  z-index: map-get(conf.$z-indexes, "breaks");
 
   margin: 0;
   padding: 0;
@@ -8,9 +18,6 @@
   height: 100vh;
   background-color: var(--title-color);
   font-family: SpaceGrotesk;
-
-  font-size: 14vh;
-  line-height: 14vh;
 
   display: flex;
   justify-content: center;
@@ -56,26 +63,25 @@
     margin: auto;
     padding: 0 -0.7em 0 0;
 
-    position: relative;
-    z-index: 3;
-
     h2.author {
       font-family: LiterataVar;
       font-variation-settings: "wght" 200, "opsz" 72;
       font-weight: 200;
-      font-size: 0.9em;
+      font-size: calc(var(--title-size) * 0.9);
+      line-height: var(--title-line-height);
 
       margin: 0;
-      padding-bottom: 0.2em;
+      padding-bottom: calc(var(--title-size) * 0.2);
 
       color: white;
 
       position: relative;
-      z-index: 3;
+      z-index: 2;
     }
 
     h1.title {
-      font-size: 1em;
+      font-size: var(--title-size);
+      line-height: var(--title-line-height);
       font-weight: 500;
       font-variation-settings: "wght" 515;
       font-family: SpaceGrotesk;
@@ -84,7 +90,7 @@
       margin: 0;
 
       position: relative;
-      z-index: 3;
+      z-index: 2;
     }
   }
 
@@ -117,8 +123,6 @@
     height: min(85vh, 85vw);
 
     position: relative;
-
-    z-index: 1;
   }
 
   .circles {
@@ -146,13 +150,6 @@
     -ms-animation: rotating-two 25s linear infinite;
     -o-animation: rotating-two 25s linear infinite;
     animation: rotating-two 25s linear infinite;
-  }
-
-  @media (max-aspect-ratio: 1/1) {
-    & {
-      font-size: 12vw;
-      line-height: 13vw;
-    }
   }
 }
 

@@ -7,6 +7,7 @@ meta:
   title: "Next-book Boilerplate"
   author: "Author Name"
   publisher: mkp
+  publisherShort: mkp
   published: 2020
   keywords: []
   edition: beletrie

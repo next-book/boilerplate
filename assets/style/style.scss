@@ -1,3 +1,12 @@
+@use "./../../node_modules/@next-book/interface/src/scss/conf" with (
+  $content-font: "Archivo, sans-serif",
+  $heading-font: "RightGrotesk, sans-serif",
+  $heading-font-weight: normal,
+
+  $content-line-height: 1.5,
+  $heading-line-height: 1.1
+);
+
 @use "./../../node_modules/@next-book/interface/src/scss/style" as interface;
 
 @use "fonts";
