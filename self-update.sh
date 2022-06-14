@@ -21,8 +21,10 @@ mv _current_bp/README.* .
 mv _current_bp/config.toml .
 mv _current_bp/package.json .
 mv _current_bp/package-lock.json .
-mv _current_bp/filters.js filters.js
 mv _current_bp/webpack.config.js webpack.config.js
+mv _current_bp/filters.js filters.js
+mv _current_bp/calc-accent.mjs calc-accent.mjs
+mv _current_bp/self-update.sh self-update.sh
 
 
 # Remove imported repo dir
