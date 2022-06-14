@@ -59,11 +59,7 @@ main {
   }
 
   blockquote {
-    margin: 1.9rem 0;
-  }
-
-  blockquote {
-    margin-left: var(--p-line-height) var(--p-indent);
+    margin: var(--p-line-height) var(--p-indent);
   }
 
   .centered {
@@ -72,6 +68,14 @@ main {
     p {
       text-align: center;
     }
+  }
+
+  hr {
+    display: block;
+    width: 39%;
+    margin: var(--section-vertical-margin) auto;
+    border: solid var(--accent-color);
+    border-width: 1px 0 0;
   }
 
   h1 + p,
