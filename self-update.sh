@@ -8,7 +8,6 @@ rm -rf layouts assets static
 
 # Get current boilerplate code from repo
 
-shopt -s dotglob
 git clone https://github.com/next-book/boilerplate.git _current_bp
 
 
