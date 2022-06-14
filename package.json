@@ -1,6 +1,6 @@
 {
   "name": "@next-book/boilerplate",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Quick start for publishing web books with next-book.",
   "main": "",
   "scripts": {
