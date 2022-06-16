@@ -17,8 +17,8 @@
         <div class="promo-custom-dark"></div>
       </div>
     {{ else }}
-      <h1{{ if .Params.hiddenTitle }} class="hidden-title"{{ end }}>{{ .Title | markdownify }}</h1>
-      {{ with .Params.authors }}<p class="authors">{{ . | markdownify }}</p>{{ end }}
+      <h1{{ if .Params.hiddenTitle }} class="hidden-title"{{ end }}>{{ partial "inline-typo.html" .Title }}</h1>
+      {{ with .Params.authors }}<p class="authors">{{ partial "inline-typo.html" . }}</p>{{ end }}
       {{ partial "typo.html" .RawContent }}
     {{ end }}
   </main>
