@@ -1,15 +1,17 @@
 {{ define "content" }}
 <div class="content">
+  <main>
     <div class="wrapper">
-    <section>
-      <ul>
-        {{ range .Pages }}
-        <li>
-          <a href="{{ .URL }}">{{ .Title }}</a>
-        </li>
-        {{ end }}
-      </ul>
-    </section>
-  </div>
+      <section>
+        <ul>
+          {{ range .Pages }}
+          <li>
+            <a href="{{ .URL }}">{{ .Title }}</a>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+    </div>
+  </main>
 </div>
 {{ end }}
