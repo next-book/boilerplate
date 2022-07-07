@@ -8,7 +8,9 @@
     {{ with .Params.role }}<meta name="nb-role" content="{{ . }}">{{ end }}
 
     {{ $book := (.Site.GetPage "/_book").Params.meta }}
-    <title>{{ with .Title }}{{ . | markdownify | plainify | htmlUnescape }}{{ else }}{{ $book.title }}{{ end }}</title>
+    <title>{{ with .Title -}}
+      {{- if eq . "* * *" }}{{ . }}{{ else }}{{ . | markdownify | plainify | htmlUnescape }}{{ end -}}
+    {{- else }}{{ $book.title }}{{ end }}</title>
 
     {{ $options := (dict "transpiler" "dartsass") }}
     {{ $style := resources.Get "style/style.scss" | toCSS $options | minify }}
