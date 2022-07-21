@@ -5,4 +5,4 @@
 {{- $raw = replaceRE "(;[AÁBCČDĎEÉĚFGHIÍJKLMNŇOÓPQRŘSŠTŤUÚŮVWXYÝZŽaábcčdďeéěfghiíjklmnňoópqrřsštťuúůvwxyýzž][AÁBCČDĎEÉĚFGHIÍJKLMNŇOÓPQRŘSŠTŤUÚŮVWXYÝZŽaábcčdďeéěfghiíjklmnňoópqrřsštťuúůvwxyýzž]?) " "$1&nbsp;" $raw -}}
 {{- $raw = chomp $raw -}}
 {{- $raw = markdownify $raw -}}
-{{- $raw -}}
+{{- $raw | safeHTML -}}
