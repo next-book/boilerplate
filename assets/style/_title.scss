@@ -55,13 +55,15 @@
     font-weight: normal;
     color: white;
     margin: 0;
-    padding: 0;
+    text-align: center;
 
     display: block;
-    width: 75vw;
     max-width: 140vh;
-    margin: auto;
-    padding: 0 -0.7em 0 0;
+    margin: 0 10vw;
+
+    @media (min-aspect-ratio: 1/1) {
+      padding-right: 20%;
+    }
 
     h2.author {
       font-family: LiterataVar;
@@ -85,7 +87,6 @@
       font-weight: 500;
       font-variation-settings: "wght" 515;
       font-family: SpaceGrotesk;
-      text-indent: -0.7em;
 
       margin: 0;
 
