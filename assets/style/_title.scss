@@ -20,7 +20,6 @@
   font-family: SpaceGrotesk;
 
   display: flex;
-  justify-content: center;
   align-items: center;
 
   overflow: hidden;
@@ -59,10 +58,10 @@
 
     display: block;
     max-width: 140vh;
-    margin: 0 10vw;
+    margin: 0 4vw;
 
     @media (min-aspect-ratio: 1/1) {
-      padding-right: 20%;
+      width: calc(80% - 8vw);
     }
 
     h2.author {
