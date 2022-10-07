@@ -1,6 +1,6 @@
 {
   "name": "@next-book/boilerplate",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Quick start for publishing web books with next-book.",
   "main": "",
   "scripts": {
@@ -21,7 +21,7 @@
     "@babel/preset-react": "^7.14.5",
     "@next-book/cover": "^1.0.2",
     "@next-book/epub2nb": "^0.1.14",
-    "@next-book/interface": "^1.0.4",
+    "@next-book/interface": "^1.0.5",
     "@next-book/publisher": "^1.0.2",
     "babel-loader": "^8.2.2",
     "d3-color": "^3.1.0",
