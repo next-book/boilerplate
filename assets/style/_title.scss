@@ -1,8 +1,8 @@
 @use "./../../node_modules/@next-book/interface/src/scss/conf";
 
 #title-wrapper {
-  --title-size: 14vh;
-  --title-line-height: 14vh;
+  --title-size: 12vh;
+  --title-line-height: 12vh;
 
   @media (max-aspect-ratio: 1/1) {
     --title-size: 12vw;

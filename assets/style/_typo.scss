@@ -5,7 +5,7 @@ body {
   --section-vertical-margin: 3rem;
 
   --h1-font-size: 4rem;
-  --h1-line-height: 6rem;
+  --h1-line-height: calc(var(--h1-font-size) * 1.5);
   --h1-margin-bottom: clamp(4rem, 30vh, 13rem);
   --h1-font-family: LiterataVar;
   --h1-font-weight: 200;
