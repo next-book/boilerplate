@@ -1,6 +1,6 @@
 {
   "name": "@next-book/boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Quick start for publishing web books with next-book.",
   "main": "",
   "scripts": {
@@ -11,7 +11,10 @@
     "server": "npm run calc-accent && npm run build:js && hugo --config config.toml && node filters.js && npm run build:cover && publish-nb -w --src _temp --out _book",
     "test": "echo \"Error: no test specified\" && exit 1",
     "calc-accent": "node calc-accent.mjs",
-    "epub-exists": "node epub-exists.js"
+    "epub-exists": "node epub-exists.js",
+    "dl-sass": "curl -sL https://github.com/sass/dart-sass-embedded/releases/download/1.0.0-beta.12/sass_embedded-1.0.0-beta.12-macos-x64.tar.gz | tar xvz && export PATH=\"$PATH:$(realpath sass_embedded)\"",
+    "debug-epub2nb": "epub2nb -s epub --gh foo/bar && rm -rf content && mv epub/content content",
+    "prep-debug": "npm i && npm link @next-book/epub2nb @next-book/publisher @next-book/interface && npm run dl-sass && npm run debug-epub2nb"
   },
   "author": "Jan Martinek",
   "dependencies": {
@@ -21,7 +24,7 @@
     "@babel/preset-react": "^7.14.5",
     "@next-book/cover": "^1.0.2",
     "@next-book/epub2nb": "^0.1.14",
-    "@next-book/interface": "^1.0.6",
+    "@next-book/interface": "^1.0.7",
     "@next-book/publisher": "^1.0.2",
     "babel-loader": "^8.2.2",
     "d3-color": "^3.1.0",
