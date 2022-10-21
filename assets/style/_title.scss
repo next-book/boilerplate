@@ -1,12 +1,12 @@
 @use "./../../node_modules/@next-book/interface/src/scss/conf";
 
 #title-wrapper {
-  --title-size: 12vh;
-  --title-line-height: 12vh;
+  --title-size: 10vh;
+  --title-line-height: 11vh;
 
   @media (max-aspect-ratio: 1/1) {
-    --title-size: 12vw;
-    --title-line-height: 13vw;
+    --title-size: 10vw;
+    --title-line-height: 11vw;
   }
 
   position: relative;
@@ -57,12 +57,9 @@
     text-align: center;
 
     display: block;
-    max-width: 140vh;
+    max-width: 100vw;
+    width: 120vh;
     margin: 0 4vw;
-
-    @media (min-aspect-ratio: 1/1) {
-      width: calc(80% - 8vw);
-    }
 
     h2.author {
       font-family: LiterataVar;
